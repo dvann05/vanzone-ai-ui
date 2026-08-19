@@ -1,0 +1,233 @@
+/* =========================================================
+   VANZONE AI UI
+   AI NEWS DESIGN SYSTEM
+   Version: 1.0.0
+   ========================================================= */
+
+:root {
+
+  /* =======================================================
+     TYPOGRAPHY
+     ======================================================= */
+
+  --vz-font-sans:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  --vz-font-display:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+
+  --vz-font-mono:
+    "JetBrains Mono",
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+
+
+  /* =======================================================
+     COLORS
+     ======================================================= */
+
+  --vz-bg: #060914;
+  --vz-bg-soft: #0a1020;
+
+  --vz-surface: rgba(255, 255, 255, 0.045);
+  --vz-surface-hover: rgba(255, 255, 255, 0.075);
+  --vz-surface-strong: rgba(255, 255, 255, 0.095);
+
+  --vz-text: #f8fafc;
+  --vz-text-soft: #b8c2d4;
+  --vz-text-muted: #718096;
+
+  --vz-border: rgba(255, 255, 255, 0.09);
+  --vz-border-strong: rgba(255, 255, 255, 0.16);
+
+
+  /* =======================================================
+     BRAND
+     ======================================================= */
+
+  --vz-primary: #6d5dfc;
+  --vz-primary-light: #8b7fff;
+  --vz-primary-dark: #5143d9;
+
+  --vz-cyan: #00d4ff;
+  --vz-blue: #3b82f6;
+  --vz-purple: #8b5cf6;
+  --vz-pink: #ec4899;
+
+  --vz-success: #22c55e;
+  --vz-warning: #f59e0b;
+  --vz-danger: #ef4444;
+
+
+  /* =======================================================
+     GRADIENTS
+     ======================================================= */
+
+  --vz-gradient-ai:
+    linear-gradient(
+      135deg,
+      #6d5dfc 0%,
+      #8b5cf6 35%,
+      #00d4ff 100%
+    );
+
+  --vz-gradient-purple:
+    linear-gradient(
+      135deg,
+      #5143d9,
+      #8b5cf6
+    );
+
+  --vz-gradient-blue:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #00d4ff
+    );
+
+  --vz-gradient-dark:
+    linear-gradient(
+      180deg,
+      #080d1a 0%,
+      #060914 100%
+    );
+
+
+  /* =======================================================
+     AI GLOW
+     ======================================================= */
+
+  --vz-glow-primary:
+    0 0 40px rgba(109, 93, 252, 0.22);
+
+  --vz-glow-cyan:
+    0 0 40px rgba(0, 212, 255, 0.18);
+
+  --vz-glow-purple:
+    0 0 60px rgba(139, 92, 246, 0.20);
+
+
+  /* =======================================================
+     SHADOWS
+     ======================================================= */
+
+  --vz-shadow-xs:
+    0 2px 8px rgba(0, 0, 0, 0.08);
+
+  --vz-shadow-sm:
+    0 8px 24px rgba(0, 0, 0, 0.16);
+
+  --vz-shadow-md:
+    0 18px 50px rgba(0, 0, 0, 0.22);
+
+  --vz-shadow-lg:
+    0 30px 80px rgba(0, 0, 0, 0.30);
+
+
+  /* =======================================================
+     BORDER RADIUS
+     ======================================================= */
+
+  --vz-radius-xs: 6px;
+  --vz-radius-sm: 10px;
+  --vz-radius-md: 16px;
+  --vz-radius-lg: 22px;
+  --vz-radius-xl: 30px;
+  --vz-radius-2xl: 40px;
+
+  --vz-radius-pill: 999px;
+
+
+  /* =======================================================
+     SPACING
+     ======================================================= */
+
+  --vz-space-1: 4px;
+  --vz-space-2: 8px;
+  --vz-space-3: 12px;
+  --vz-space-4: 16px;
+  --vz-space-5: 20px;
+  --vz-space-6: 24px;
+  --vz-space-8: 32px;
+  --vz-space-10: 40px;
+  --vz-space-12: 48px;
+  --vz-space-16: 64px;
+  --vz-space-20: 80px;
+  --vz-space-24: 96px;
+
+
+  /* =======================================================
+     LAYOUT
+     ======================================================= */
+
+  --vz-container-sm: 640px;
+  --vz-container-md: 768px;
+  --vz-container-lg: 1024px;
+  --vz-container-xl: 1240px;
+  --vz-container-2xl: 1440px;
+
+  --vz-reading-width: 760px;
+
+
+  /* =======================================================
+     TRANSITIONS
+     ======================================================= */
+
+  --vz-ease:
+    cubic-bezier(0.22, 1, 0.36, 1);
+
+  --vz-ease-soft:
+    cubic-bezier(0.16, 1, 0.3, 1);
+
+  --vz-ease-bounce:
+    cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --vz-duration-fast: 160ms;
+  --vz-duration: 350ms;
+  --vz-duration-slow: 700ms;
+
+
+  /* =======================================================
+     Z-INDEX
+     ======================================================= */
+
+  --vz-z-base: 1;
+  --vz-z-card: 10;
+  --vz-z-header: 100;
+  --vz-z-dropdown: 500;
+  --vz-z-overlay: 900;
+  --vz-z-modal: 1000;
+  --vz-z-toast: 2000;
+
+
+  /* =======================================================
+     EFFECTS
+     ======================================================= */
+
+  --vz-blur-sm: blur(8px);
+  --vz-blur-md: blur(16px);
+  --vz-blur-lg: blur(28px);
+  --vz-blur-xl: blur(40px);
+
+
+  /* =======================================================
+     MOTION
+     ======================================================= */
+
+  --vz-hover-lift: translateY(-6px);
+  --vz-hover-scale: scale(1.025);
+
+  }
