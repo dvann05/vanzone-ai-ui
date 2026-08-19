@@ -1162,6 +1162,379 @@ const initEscapeKey = () => {
 
 };
 
+   /* =======================================================
+   COMMAND PALETTE
+   ======================================================= */
+
+const initCommandPalette = () => {
+
+  const command =
+    document.querySelector(
+      "[data-vz-command]"
+    );
+
+  if (!command) return;
+
+
+  const input =
+    command.querySelector(
+      "[data-vz-command-input]"
+    );
+
+  const items =
+    Array.from(
+      command.querySelectorAll(
+        "[data-vz-command-item]"
+      )
+    );
+
+
+  let selectedIndex = 0;
+
+
+  const open = () => {
+
+    command.classList.add(
+      "is-open"
+    );
+
+    document.body.classList.add(
+      "vz-menu-open"
+    );
+
+    if (input) {
+
+      setTimeout(() => {
+        input.focus();
+      }, 100);
+
+    }
+
+    updateSelection();
+
+  };
+
+
+  const close = () => {
+
+    command.classList.remove(
+      "is-open"
+    );
+
+    document.body.classList.remove(
+      "vz-menu-open"
+    );
+
+  };
+
+
+  const updateSelection = () => {
+
+    const visible =
+      items.filter(
+        item =>
+          !item.hidden
+      );
+
+
+    if (!visible.length) {
+      return;
+    }
+
+
+    if (
+      selectedIndex >=
+      visible.length
+    ) {
+
+      selectedIndex =
+        visible.length - 1;
+
+    }
+
+
+    if (
+      selectedIndex < 0
+    ) {
+
+      selectedIndex = 0;
+
+    }
+
+
+    items.forEach(
+      item => {
+
+        item.classList.remove(
+          "is-selected"
+        );
+
+      }
+    );
+
+
+    const current =
+      visible[selectedIndex];
+
+
+    current.classList.add(
+      "is-selected"
+    );
+
+  };
+
+
+  const filter = () => {
+
+    const query =
+      input
+        ? input.value
+            .trim()
+            .toLowerCase()
+        : "";
+
+
+    let visibleCount = 0;
+
+
+    items.forEach(
+      item => {
+
+        const text =
+          item.textContent
+            .toLowerCase();
+
+
+        const match =
+          !query ||
+          text.includes(query);
+
+
+        item.hidden =
+          !match;
+
+
+        if (match) {
+          visibleCount++;
+        }
+
+      }
+    );
+
+
+    selectedIndex = 0;
+
+    updateSelection();
+
+
+    const empty =
+      command.querySelector(
+        "[data-vz-command-empty]"
+      );
+
+
+    if (empty) {
+
+      empty.hidden =
+        visibleCount !== 0;
+
+    }
+
+  };
+
+
+  items.forEach(
+    item => {
+
+      item.addEventListener(
+        "click",
+        () => {
+
+          const href =
+            item.getAttribute(
+              "data-vz-command-href"
+            );
+
+
+          close();
+
+
+          if (href) {
+
+            window.location.href =
+              href;
+
+          }
+
+        }
+      );
+
+    }
+  );
+
+
+  if (input) {
+
+    input.addEventListener(
+      "input",
+      filter
+    );
+
+  }
+
+
+  document.addEventListener(
+    "keydown",
+    event => {
+
+      if (
+        (event.ctrlKey ||
+         event.metaKey) &&
+        event.key.toLowerCase() === "k"
+      ) {
+
+        event.preventDefault();
+
+        if (
+          command.classList.contains(
+            "is-open"
+          )
+        ) {
+
+          close();
+
+        } else {
+
+          open();
+
+        }
+
+        return;
+
+      }
+
+
+      if (
+        !command.classList.contains(
+          "is-open"
+        )
+      ) {
+
+        return;
+
+      }
+
+
+      const visible =
+        items.filter(
+          item =>
+            !item.hidden
+        );
+
+
+      if (
+        event.key === "ArrowDown"
+      ) {
+
+        event.preventDefault();
+
+        selectedIndex++;
+
+        if (
+          selectedIndex >=
+          visible.length
+        ) {
+
+          selectedIndex = 0;
+
+        }
+
+        updateSelection();
+
+      }
+
+
+      if (
+        event.key === "ArrowUp"
+      ) {
+
+        event.preventDefault();
+
+        selectedIndex--;
+
+        if (
+          selectedIndex < 0
+        ) {
+
+          selectedIndex =
+            visible.length - 1;
+
+        }
+
+        updateSelection();
+
+      }
+
+
+      if (
+        event.key === "Enter" &&
+        visible.length
+      ) {
+
+        event.preventDefault();
+
+        visible[
+          selectedIndex
+        ].click();
+
+      }
+
+
+      if (
+        event.key === "Escape"
+      ) {
+
+        close();
+
+      }
+
+    }
+  );
+
+
+  command.addEventListener(
+    "click",
+    event => {
+
+      if (
+        event.target === command
+      ) {
+
+        close();
+
+      }
+
+    }
+  );
+
+
+  document
+    .querySelectorAll(
+      "[data-vz-command-open]"
+    )
+    .forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          open
+        );
+
+      }
+    );
+
+};
+
 
   /* =======================================================
      INITIALIZE
@@ -1170,34 +1543,23 @@ const initEscapeKey = () => {
   ready(() => {
 
   initReveal();
-
   initNavbar();
-
   initSpotlight();
-
   initMagneticButtons();
-
   initTilt();
-
   initSmoothAnchors();
-
   initMobileMenu();
-
   initTheme();
-
   initCopyCode();
-
   initReadingProgress();
 
   initTabs();
-
   initAccordion();
-
   initModals();
-
   initSearchOverlay();
-
   initEscapeKey();
+
+  initCommandPalette();
 
 });
 
