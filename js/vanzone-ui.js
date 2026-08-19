@@ -800,6 +800,368 @@
 
   };
 
+   /* =======================================================
+   TABS
+   ======================================================= */
+
+const initTabs = () => {
+
+  document
+    .querySelectorAll("[data-vz-tabs]")
+    .forEach((tabs) => {
+
+      const buttons =
+        tabs.querySelectorAll(
+          ".vz-tab"
+        );
+
+      const panels =
+        tabs.querySelectorAll(
+          ".vz-tab-panel"
+        );
+
+      buttons.forEach((button, index) => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            buttons.forEach((item) => {
+              item.classList.remove(
+                "is-active"
+              );
+            });
+
+            panels.forEach((panel) => {
+              panel.classList.remove(
+                "is-active"
+              );
+            });
+
+            button.classList.add(
+              "is-active"
+            );
+
+            if (panels[index]) {
+              panels[index].classList.add(
+                "is-active"
+              );
+            }
+
+          }
+        );
+
+      });
+
+    });
+
+};
+
+
+/* =======================================================
+   ACCORDION
+   ======================================================= */
+
+const initAccordion = () => {
+
+  document
+    .querySelectorAll(
+      ".vz-accordion-trigger"
+    )
+    .forEach((trigger) => {
+
+      trigger.addEventListener(
+        "click",
+        () => {
+
+          const item =
+            trigger.closest(
+              ".vz-accordion-item"
+            );
+
+          if (!item) return;
+
+          const open =
+            item.classList.toggle(
+              "is-open"
+            );
+
+          trigger.setAttribute(
+            "aria-expanded",
+            String(open)
+          );
+
+        }
+      );
+
+    });
+
+};
+
+
+/* =======================================================
+   MODAL
+   ======================================================= */
+
+const initModals = () => {
+
+  document
+    .querySelectorAll(
+      "[data-vz-modal-open]"
+    )
+    .forEach((button) => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          const selector =
+            button.getAttribute(
+              "data-vz-modal-open"
+            );
+
+          const modal =
+            document.querySelector(
+              selector
+            );
+
+          if (!modal) return;
+
+          modal.classList.add(
+            "is-open"
+          );
+
+          document.body.classList.add(
+            "vz-menu-open"
+          );
+
+        }
+      );
+
+    });
+
+
+  document
+    .querySelectorAll(
+      "[data-vz-modal-close]"
+    )
+    .forEach((button) => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          const modal =
+            button.closest(
+              ".vz-modal"
+            );
+
+          if (!modal) return;
+
+          modal.classList.remove(
+            "is-open"
+          );
+
+          document.body.classList.remove(
+            "vz-menu-open"
+          );
+
+        }
+      );
+
+    });
+
+};
+
+
+/* =======================================================
+   TOAST
+   ======================================================= */
+
+const showToast = (
+  message,
+  duration = 3000
+) => {
+
+  let container =
+    document.querySelector(
+      ".vz-toast-container"
+    );
+
+
+  if (!container) {
+
+    container =
+      document.createElement(
+        "div"
+      );
+
+    container.className =
+      "vz-toast-container";
+
+    document.body.appendChild(
+      container
+    );
+
+  }
+
+
+  const toast =
+    document.createElement(
+      "div"
+    );
+
+  toast.className =
+    "vz-toast";
+
+  toast.textContent =
+    message;
+
+
+  container.appendChild(
+    toast
+  );
+
+
+  window.setTimeout(
+    () => {
+
+      toast.classList.add(
+        "is-leaving"
+      );
+
+      window.setTimeout(
+        () => {
+          toast.remove();
+        },
+        400
+      );
+
+    },
+    duration
+  );
+
+};
+
+
+/* =======================================================
+   SEARCH OVERLAY
+   ======================================================= */
+
+const initSearchOverlay = () => {
+
+  document
+    .querySelectorAll(
+      "[data-vz-search-open]"
+    )
+    .forEach((button) => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          const selector =
+            button.getAttribute(
+              "data-vz-search-open"
+            );
+
+          const overlay =
+            document.querySelector(
+              selector
+            );
+
+          if (!overlay) return;
+
+          overlay.classList.add(
+            "is-open"
+          );
+
+          const input =
+            overlay.querySelector(
+              "input"
+            );
+
+          if (input) {
+
+            window.setTimeout(
+              () => input.focus(),
+              200
+            );
+
+          }
+
+        }
+      );
+
+    });
+
+
+  document
+    .querySelectorAll(
+      "[data-vz-search-close]"
+    )
+    .forEach((button) => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          const overlay =
+            button.closest(
+              ".vz-search-overlay"
+            );
+
+          if (!overlay) return;
+
+          overlay.classList.remove(
+            "is-open"
+          );
+
+        }
+      );
+
+    });
+
+};
+
+
+/* =======================================================
+   KEYBOARD ESCAPE
+   ======================================================= */
+
+const initEscapeKey = () => {
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+
+      if (event.key !== "Escape") {
+        return;
+      }
+
+
+      document
+        .querySelectorAll(
+          ".vz-modal.is-open, .vz-search-overlay.is-open, .vz-mobile-menu.is-open"
+        )
+        .forEach((element) => {
+
+          element.classList.remove(
+            "is-open"
+          );
+
+        });
+
+
+      document.body.classList.remove(
+        "vz-menu-open"
+      );
+
+    }
+  );
+
+};
+
 
   /* =======================================================
      INITIALIZE
