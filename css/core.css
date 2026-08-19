@@ -1,0 +1,551 @@
+/* =========================================================
+   VANZONE AI UI
+   CORE SYSTEM
+   Version: 1.0.0
+   ========================================================= */
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.vz-container {
+  width: min(
+    calc(100% - 32px),
+    var(--vz-container-xl)
+  );
+
+  margin-inline: auto;
+}
+
+
+.vz-container-sm {
+  width: min(
+    calc(100% - 32px),
+    var(--vz-container-sm)
+  );
+
+  margin-inline: auto;
+}
+
+
+.vz-container-md {
+  width: min(
+    calc(100% - 32px),
+    var(--vz-container-md)
+  );
+
+  margin-inline: auto;
+}
+
+
+.vz-container-lg {
+  width: min(
+    calc(100% - 32px),
+    var(--vz-container-lg)
+  );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   READING CONTAINER
+   ========================================================= */
+
+.vz-reading {
+  width: min(
+    100%,
+    var(--vz-reading-width)
+  );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.vz-section {
+  position: relative;
+
+  padding-block: clamp(
+    64px,
+    8vw,
+    120px
+  );
+}
+
+
+.vz-section-sm {
+  padding-block: 48px;
+}
+
+
+.vz-section-lg {
+  padding-block: 120px;
+}
+
+
+/* =========================================================
+   FLEX
+   ========================================================= */
+
+.vz-flex {
+  display: flex;
+}
+
+
+.vz-flex-center {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.vz-flex-between {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.vz-flex-column {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   STACK
+   ========================================================= */
+
+.vz-stack {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--vz-gap);
+}
+
+
+.vz-stack-sm {
+  gap: 12px;
+}
+
+
+.vz-stack-lg {
+  gap: 40px;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.vz-grid {
+  display: grid;
+
+  gap: var(--vz-gap);
+}
+
+
+.vz-grid-2 {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
+
+
+.vz-grid-3 {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+
+.vz-grid-4 {
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+}
+
+
+/* =========================================================
+   AUTO GRID
+   ========================================================= */
+
+.vz-auto-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        min(100%, 280px),
+        1fr
+      )
+    );
+
+  gap: var(--vz-gap);
+}
+
+
+/* =========================================================
+   DISPLAY
+   ========================================================= */
+
+.vz-block {
+  display: block;
+}
+
+
+.vz-inline {
+  display: inline;
+}
+
+
+.vz-inline-block {
+  display: inline-block;
+}
+
+
+.vz-hidden {
+  display: none !important;
+}
+
+
+/* =========================================================
+   POSITION
+   ========================================================= */
+
+.vz-relative {
+  position: relative;
+}
+
+
+.vz-absolute {
+  position: absolute;
+}
+
+
+.vz-fixed {
+  position: fixed;
+}
+
+
+.vz-sticky {
+  position: sticky;
+}
+
+
+/* =========================================================
+   OVERFLOW
+   ========================================================= */
+
+.vz-overflow-hidden {
+  overflow: hidden;
+}
+
+
+.vz-overflow-auto {
+  overflow: auto;
+}
+
+
+/* =========================================================
+   WIDTH
+   ========================================================= */
+
+.vz-w-full {
+  width: 100%;
+}
+
+
+.vz-max-content {
+  width: max-content;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.vz-text-center {
+  text-align: center;
+}
+
+
+.vz-text-left {
+  text-align: left;
+}
+
+
+.vz-text-right {
+  text-align: right;
+}
+
+
+.vz-text-muted {
+  color: var(--vz-text-muted);
+}
+
+
+.vz-text-soft {
+  color: var(--vz-text-soft);
+}
+
+
+/* =========================================================
+   GRADIENT TEXT
+   ========================================================= */
+
+.vz-text-gradient {
+  color: transparent;
+
+  background:
+    var(--vz-gradient-ai);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+
+/* =========================================================
+   SURFACE
+   ========================================================= */
+
+.vz-surface {
+  background:
+    var(--vz-surface);
+
+  border:
+    1px solid var(--vz-border);
+}
+
+
+/* =========================================================
+   GLASS
+   ========================================================= */
+
+.vz-glass {
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  border:
+    1px solid var(--vz-border);
+
+  backdrop-filter:
+    var(--vz-blur-md);
+
+  -webkit-backdrop-filter:
+    var(--vz-blur-md);
+}
+
+
+/* =========================================================
+   GLOW
+   ========================================================= */
+
+.vz-glow {
+  box-shadow:
+    var(--vz-glow-primary);
+}
+
+
+.vz-glow-cyan {
+  box-shadow:
+    var(--vz-glow-cyan);
+}
+
+
+.vz-glow-purple {
+  box-shadow:
+    var(--vz-glow-purple);
+}
+
+
+/* =========================================================
+   BORDER
+   ========================================================= */
+
+.vz-border {
+  border:
+    1px solid var(--vz-border);
+}
+
+
+.vz-border-strong {
+  border:
+    1px solid var(--vz-border-strong);
+}
+
+
+/* =========================================================
+   RADIUS
+   ========================================================= */
+
+.vz-rounded-sm {
+  border-radius:
+    var(--vz-radius-sm);
+}
+
+
+.vz-rounded-md {
+  border-radius:
+    var(--vz-radius-md);
+}
+
+
+.vz-rounded-lg {
+  border-radius:
+    var(--vz-radius-lg);
+}
+
+
+.vz-rounded-xl {
+  border-radius:
+    var(--vz-radius-xl);
+}
+
+
+.vz-rounded-pill {
+  border-radius:
+    var(--vz-radius-pill);
+}
+
+
+/* =========================================================
+   VISUALLY HIDDEN
+   Accessibility helper
+   ========================================================= */
+
+.vz-sr-only {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.vz-divider {
+  width: 100%;
+  height: 1px;
+
+  background:
+    var(--vz-border);
+}
+
+
+/* =========================================================
+   GRADIENT DIVIDER
+   ========================================================= */
+
+.vz-divider-gradient {
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(109, 93, 252, .6),
+      rgba(0, 212, 255, .6),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.vz-bg-glow {
+  position: relative;
+}
+
+
+.vz-bg-glow::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -20%;
+
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(109, 93, 252, .16),
+      transparent 65%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE GRID
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .vz-grid-4 {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .vz-grid-3 {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 640px) {
+
+  .vz-container,
+  .vz-container-sm,
+  .vz-container-md,
+  .vz-container-lg {
+    width: min(
+      calc(100% - 24px),
+      100%
+    );
+  }
+
+
+  .vz-grid-2,
+  .vz-grid-3,
+  .vz-grid-4 {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .vz-section {
+    padding-block: 56px;
+  }
+
+
+  .vz-section-lg {
+    padding-block: 72px;
+  }
+
+           }
