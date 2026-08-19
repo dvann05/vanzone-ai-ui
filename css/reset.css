@@ -1,0 +1,304 @@
+/* =========================================================
+   VANZONE AI UI
+   RESET & BASE FOUNDATION
+   Version: 1.0.0
+   ========================================================= */
+
+
+/* =========================================================
+   BOX MODEL
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DOCUMENT
+   ========================================================= */
+
+html {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+
+  scroll-behavior: smooth;
+
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  scrollbar-gutter: stable;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+
+  background: var(--vz-bg);
+  color: var(--vz-text);
+
+  font-family: var(--vz-font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+
+  transition:
+    background-color var(--vz-duration) var(--vz-ease),
+    color var(--vz-duration) var(--vz-ease);
+}
+
+
+/* =========================================================
+   MEDIA
+   ========================================================= */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+img {
+  height: auto;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+button,
+input,
+textarea,
+select {
+  margin: 0;
+
+  font: inherit;
+
+  color: inherit;
+}
+
+
+button,
+input,
+textarea,
+select {
+  border: 0;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+a:hover {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  font-family: var(--vz-font-display);
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
+p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* =========================================================
+   BLOCKQUOTES
+   ========================================================= */
+
+blockquote,
+figure {
+  margin: 0;
+}
+
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* =========================================================
+   CODE
+   ========================================================= */
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--vz-font-mono);
+}
+
+
+pre {
+  margin: 0;
+
+  overflow-x: auto;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: rgba(109, 93, 252, 0.35);
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+:focus-visible {
+  outline: 2px solid var(--vz-primary);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+::placeholder {
+  color: var(--vz-text-muted);
+  opacity: 1;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: var(--vz-bg);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+
+  border-radius: var(--vz-radius-pill);
+
+  border: 2px solid var(--vz-bg);
+
+  transition: background var(--vz-duration-fast) ease;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(109, 93, 252, 0.65);
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+}
