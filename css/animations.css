@@ -1,0 +1,594 @@
+/* =========================================================
+   VANZONE AI UI
+   MOTION & ANIMATION SYSTEM
+   Version: 1.0.0
+   ========================================================= */
+
+
+/* =========================================================
+   BASE MOTION
+   ========================================================= */
+
+.vz-animate {
+  animation-duration: var(--vz-duration-slow);
+  animation-timing-function: var(--vz-ease);
+  animation-fill-mode: both;
+}
+
+.vz-animate-fast {
+  animation-duration: var(--vz-duration-fast);
+  animation-timing-function: var(--vz-ease);
+  animation-fill-mode: both;
+}
+
+.vz-animate-slow {
+  animation-duration: 1.2s;
+  animation-timing-function: var(--vz-ease);
+  animation-fill-mode: both;
+}
+
+
+/* =========================================================
+   FADE
+   ========================================================= */
+
+@keyframes vzFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.vz-fade-in {
+  animation-name: vzFadeIn;
+}
+
+
+/* =========================================================
+   FADE UP
+   ========================================================= */
+
+@keyframes vzFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vz-fade-up {
+  animation-name: vzFadeUp;
+}
+
+
+/* =========================================================
+   FADE DOWN
+   ========================================================= */
+
+@keyframes vzFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vz-fade-down {
+  animation-name: vzFadeDown;
+}
+
+
+/* =========================================================
+   FADE LEFT
+   ========================================================= */
+
+@keyframes vzFadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.vz-fade-left {
+  animation-name: vzFadeLeft;
+}
+
+
+/* =========================================================
+   FADE RIGHT
+   ========================================================= */
+
+@keyframes vzFadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.vz-fade-right {
+  animation-name: vzFadeRight;
+}
+
+
+/* =========================================================
+   SCALE IN
+   ========================================================= */
+
+@keyframes vzScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.vz-scale-in {
+  animation-name: vzScaleIn;
+}
+
+
+/* =========================================================
+   BLUR IN
+   ========================================================= */
+
+@keyframes vzBlurIn {
+  from {
+    opacity: 0;
+    filter: blur(16px);
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.vz-blur-in {
+  animation-name: vzBlurIn;
+}
+
+
+/* =========================================================
+   REVEAL
+   ========================================================= */
+
+@keyframes vzReveal {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translateY(0);
+  }
+}
+
+.vz-reveal {
+  animation-name: vzReveal;
+}
+
+
+/* =========================================================
+   FLOAT
+   ========================================================= */
+
+@keyframes vzFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.vz-float {
+  animation:
+    vzFloat 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   FLOAT LARGE
+   ========================================================= */
+
+@keyframes vzFloatLarge {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -18px, 0);
+  }
+}
+
+.vz-float-large {
+  animation:
+    vzFloatLarge 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   PULSE
+   ========================================================= */
+
+@keyframes vzPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .75;
+    transform: scale(1.04);
+  }
+}
+
+.vz-pulse {
+  animation:
+    vzPulse 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   GLOW PULSE
+   ========================================================= */
+
+@keyframes vzGlowPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(109, 93, 252, .12);
+  }
+
+  50% {
+    box-shadow:
+      0 0 55px rgba(109, 93, 252, .34);
+  }
+}
+
+.vz-glow-pulse {
+  animation:
+    vzGlowPulse 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   GRADIENT FLOW
+   ========================================================= */
+
+@keyframes vzGradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.vz-gradient-flow {
+  background-size: 220% 220%;
+
+  animation:
+    vzGradientFlow 8s ease infinite;
+}
+
+
+/* =========================================================
+   SHIMMER
+   ========================================================= */
+
+@keyframes vzShimmer {
+  from {
+    background-position:
+      -200% 0;
+  }
+
+  to {
+    background-position:
+      200% 0;
+  }
+}
+
+.vz-shimmer {
+  background:
+    linear-gradient(
+      110deg,
+      transparent 30%,
+      rgba(255,255,255,.12) 50%,
+      transparent 70%
+    );
+
+  background-size:
+    200% 100%;
+
+  animation:
+    vzShimmer 2.5s linear infinite;
+}
+
+
+/* =========================================================
+   ROTATE
+   ========================================================= */
+
+@keyframes vzRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vz-spin {
+  animation:
+    vzRotate 8s linear infinite;
+}
+
+
+/* =========================================================
+   SLOW ROTATE
+   ========================================================= */
+
+.vz-spin-slow {
+  animation:
+    vzRotate 24s linear infinite;
+}
+
+
+/* =========================================================
+   BORDER FLOW
+   ========================================================= */
+
+@keyframes vzBorderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.vz-border-flow {
+  position: relative;
+  isolation: isolate;
+}
+
+.vz-border-flow::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -1px;
+
+  z-index: -1;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--vz-primary),
+      var(--vz-cyan),
+      var(--vz-purple),
+      var(--vz-primary)
+    );
+
+  background-size: 300% 100%;
+
+  animation:
+    vzBorderFlow 5s linear infinite;
+
+  opacity: .75;
+}
+
+
+/* =========================================================
+   ORBIT
+   ========================================================= */
+
+@keyframes vzOrbit {
+  from {
+    transform:
+      rotate(0deg)
+      translateX(20px)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      rotate(360deg)
+      translateX(20px)
+      rotate(-360deg);
+  }
+}
+
+.vz-orbit {
+  animation:
+    vzOrbit 8s linear infinite;
+}
+
+
+/* =========================================================
+   TILT HOVER
+   ========================================================= */
+
+.vz-hover-lift {
+  transition:
+    transform var(--vz-duration) var(--vz-ease),
+    box-shadow var(--vz-duration) var(--vz-ease);
+}
+
+.vz-hover-lift:hover {
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    var(--vz-shadow-md);
+}
+
+
+/* =========================================================
+   SCALE HOVER
+   ========================================================= */
+
+.vz-hover-scale {
+  transition:
+    transform var(--vz-duration) var(--vz-ease);
+}
+
+.vz-hover-scale:hover {
+  transform:
+    scale(1.035);
+}
+
+
+/* =========================================================
+   GLOW HOVER
+   ========================================================= */
+
+.vz-hover-glow {
+  transition:
+    box-shadow var(--vz-duration) var(--vz-ease),
+    border-color var(--vz-duration) var(--vz-ease);
+}
+
+.vz-hover-glow:hover {
+  border-color:
+    rgba(109, 93, 252, .5);
+
+  box-shadow:
+    0 20px 60px rgba(109, 93, 252, .18);
+}
+
+
+/* =========================================================
+   IMAGE ZOOM
+   ========================================================= */
+
+.vz-image-zoom {
+  overflow: hidden;
+}
+
+.vz-image-zoom img {
+  transition:
+    transform .8s var(--vz-ease);
+}
+
+.vz-image-zoom:hover img {
+  transform:
+    scale(1.08);
+}
+
+
+/* =========================================================
+   STAGGER DELAYS
+   ========================================================= */
+
+.vz-delay-1 {
+  animation-delay: 80ms;
+}
+
+.vz-delay-2 {
+  animation-delay: 160ms;
+}
+
+.vz-delay-3 {
+  animation-delay: 240ms;
+}
+
+.vz-delay-4 {
+  animation-delay: 320ms;
+}
+
+.vz-delay-5 {
+  animation-delay: 400ms;
+}
+
+.vz-delay-6 {
+  animation-delay: 480ms;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+.vz-reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity .8s var(--vz-ease),
+    transform .8s var(--vz-ease);
+}
+
+.vz-reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .vz-float,
+  .vz-float-large,
+  .vz-pulse,
+  .vz-glow-pulse,
+  .vz-gradient-flow,
+  .vz-shimmer,
+  .vz-spin,
+  .vz-spin-slow,
+  .vz-orbit,
+  .vz-border-flow {
+    animation: none;
+  }
+
+}
