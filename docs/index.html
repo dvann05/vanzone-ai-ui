@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Vanzone AI UI — futuristic AI news design system."
+  >
+
+  <title>
+    Vanzone AI UI — Design System
+  </title>
+
+
+  <!-- =====================================================
+       GOOGLE FONT
+       ===================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       VANZONE CSS
+       ===================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="../css/variables.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/reset.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/core.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/animations.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/effects.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/components.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/responsive.css"
+  >
+
+</head>
+
+
+<body class="vz-noise">
+
+
+  <!-- =====================================================
+       READING PROGRESS
+       ===================================================== -->
+
+  <div
+    data-vz-reading-progress
+    style="
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:3px;
+      background:linear-gradient(
+        90deg,
+        #6d5dfc,
+        #00d4ff
+      );
+      transform:scaleX(0);
+      transform-origin:left;
+      z-index:9999;
+    "
+  ></div>
+
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="vz-navbar">
+
+    <div class="vz-container">
+
+      <div class="vz-navbar-inner">
+
+
+        <a
+          href="#"
+          class="vz-logo"
+        >
+
+          <span class="vz-logo-mark">
+            V
+          </span>
+
+          <span>
+            Vanzone
+          </span>
+
+        </a>
+
+
+        <nav class="vz-nav">
+
+          <a
+            href="#latest"
+            class="vz-nav-link is-active"
+          >
+            Latest
+          </a>
+
+          <a
+            href="#trending"
+            class="vz-nav-link"
+          >
+            Trending
+          </a>
+
+          <a
+            href="#categories"
+            class="vz-nav-link"
+          >
+            Categories
+          </a>
+
+          <a
+            href="#about"
+            class="vz-nav-link"
+          >
+            About
+          </a>
+
+        </nav>
+
+
+        <div class="vz-navbar-actions">
+
+          <button
+            class="vz-btn vz-btn-secondary"
+            data-vz-theme-toggle
+            aria-label="Switch theme"
+          >
+            ◐
+          </button>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
+
+  <section
+    class="
+      vz-hero
+      vz-aurora
+      vz-ai-grid
+      vz-spotlight
+    "
+  >
+
+
+    <!-- Floating AI orbs -->
+
+    <div
+      class="
+        vz-orb
+        vz-orb-primary
+        vz-floating-orb
+      "
+      style="
+        top:15%;
+        right:12%;
+      "
+    ></div>
+
+
+    <div
+      class="
+        vz-orb
+        vz-orb-cyan
+        vz-floating-orb
+      "
+      style="
+        bottom:5%;
+        left:8%;
+        width:160px;
+        height:160px;
+      "
+    ></div>
+
+
+    <!-- Hero content -->
+
+    <div class="vz-container">
+
+      <div
+        class="
+          vz-hero-content
+          vz-reveal-on-scroll
+        "
+      >
+
+        <div class="vz-hero-eyebrow">
+
+          <span>✦</span>
+
+          AI INTELLIGENCE PLATFORM
+
+        </div>
+
+
+        <h1
+          class="
+            vz-hero-title
+            vz-text-gradient
+          "
+        >
+
+          The Future
+          <br>
+
+          of AI News.
+
+        </h1>
+
+
+        <p
+          class="
+            vz-hero-description
+          "
+        >
+
+          Discover the latest breakthroughs,
+          products, research, and ideas shaping
+          the future of artificial intelligence.
+
+        </p>
+
+
+        <div
+          class="
+            vz-hero-actions
+          "
+        >
+
+          <a
+            href="#latest"
+            class="
+              vz-btn
+              vz-btn-primary
+            "
+            data-vz-magnetic
+          >
+
+            Explore AI News
+
+            <span>→</span>
+
+          </a>
+
+
+          <a
+            href="#trending"
+            class="
+              vz-btn
+              vz-btn-secondary
+            "
+          >
+
+            Trending Stories
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FEATURED
+       ===================================================== -->
+
+  <main>
+
+
+    <section
+      class="
+        vz-section
+      "
+    >
+
+      <div class="vz-container">
+
+
+        <div
+          class="
+            vz-featured
+            vz-glow-border
+            vz-reveal-on-scroll
+          "
+        >
+
+
+          <div
+            class="
+              vz-featured-image
+              vz-image-zoom
+            "
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1400&q=85"
+              alt="Artificial intelligence technology"
+            >
+
+          </div>
+
+
+          <div
+            class="
+              vz-featured-content
+            "
+          >
+
+            <span
+              class="vz-badge"
+            >
+              FEATURED STORY
+            </span>
+
+
+            <h2
+              class="
+                vz-featured-title
+                vz-text-gradient
+              "
+            >
+
+              AI Is Moving
+              Into Its Next Era
+
+            </h2>
+
+
+            <p
+              class="
+                vz-featured-excerpt
+              "
+            >
+
+              From AI agents to multimodal systems,
+              the technology landscape is evolving
+              at unprecedented speed.
+
+            </p>
+
+
+            <div
+              style="
+                margin-top:28px;
+              "
+            >
+
+              <a
+                href="#"
+                class="
+                  vz-btn
+                  vz-btn-primary
+                "
+              >
+
+                Read Story →
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         LATEST NEWS
+         =================================================== -->
+
+    <section
+      id="latest"
+      class="
+        vz-section
+        vz-bg-glow
+      "
+    >
+
+      <div class="vz-container">
+
+
+        <div
+          class="
+            vz-section-header
+            vz-reveal-on-scroll
+          "
+        >
+
+          <div>
+
+            <div
+              class="
+                vz-section-kicker
+              "
+            >
+              Latest Intelligence
+            </div>
+
+            <h2
+              class="
+                vz-section-title
+              "
+            >
+              Latest AI News
+            </h2>
+
+            <p
+              class="
+                vz-section-description
+              "
+            >
+              The newest developments from
+              the world of artificial intelligence.
+            </p>
+
+          </div>
+
+
+          <a
+            href="#"
+            class="
+              vz-btn
+              vz-btn-secondary
+            "
+          >
+            View All
+          </a>
+
+        </div>
+
+
+
+        <div
+          class="
+            vz-auto-grid
+          "
+        >
+
+
+          <!-- CARD 1 -->
+
+          <article
+            class="
+              vz-news-card
+              vz-glow-border
+              vz-reveal-on-scroll
+            "
+            data-vz-tilt
+          >
+
+            <div
+              class="
+                vz-news-image
+              "
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=1000&q=80"
+                alt="AI technology"
+              >
+
+            </div>
+
+
+            <div
+              class="
+                vz-news-body
+              "
+            >
+
+              <span
+                class="vz-badge"
+              >
+                AI
+              </span>
+
+
+              <h3
+                class="
+                  vz-news-title
+                "
+              >
+
+                <a href="#">
+                  The Race Toward
+                  More Capable AI Systems
+                </a>
+
+              </h3>
+
+
+              <p
+                class="
+                  vz-news-excerpt
+                "
+              >
+
+                Researchers and technology
+                companies continue pushing
+                the limits of modern AI.
+
+              </p>
+
+
+              <div
+                class="
+                  vz-news-meta
+                "
+              >
+
+                <span>
+                  5 min read
+                </span>
+
+                <span
+                  class="vz-meta-dot"
+                ></span>
+
+                <span>
+                  Today
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 2 -->
+
+          <article
+            class="
+              vz-news-card
+              vz-glow-border
+              vz-reveal-on-scroll
+            "
+            data-vz-tilt
+          >
+
+            <div
+              class="
+                vz-news-image
+              "
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1000&q=80"
+                alt="AI robot"
+              >
+
+            </div>
+
+
+            <div
+              class="
+                vz-news-body
+              "
+
+            >
+
+              <span
+                class="
+                  vz-badge
+                  vz-badge-cyan
+                "
+              >
+                AI AGENTS
+              </span>
+
+
+              <h3
+                class="
+                  vz-news-title
+                "
+              >
+
+                <a href="#">
+                  AI Agents Are
+                  Changing How We Work
+                </a>
+
+              </h3>
+
+
+              <p
+                class="
+                  vz-news-excerpt
+                "
+              >
+
+                Autonomous systems are beginning
+                to handle increasingly complex
+                digital workflows.
+
+              </p>
+
+
+              <div
+                class="
+                  vz-news-meta
+                "
+              >
+
+                <span>
+                  7 min read
+                </span>
+
+                <span
+                  class="vz-meta-dot"
+                ></span>
+
+                <span>
+                  AI Agents
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 3 -->
+
+          <article
+            class="
+              vz-news-card
+              vz-glow-border
+              vz-reveal-on-scroll
+            "
+            data-vz-tilt
+          >
+
+            <div
+              class="
+                vz-news-image
+              "
+            >
+
+              <img
+                src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1000&q=80"
+                alt="Artificial intelligence research"
+              >
+
+            </div>
+
+
+            <div
+              class="
+                vz-news-body
+              "
+            >
+
+              <span
+                class="
+                  vz-badge
+                  vz-badge-success
+                "
+              >
+                RESEARCH
+              </span>
+
+
+              <h3
+                class="
+                  vz-news-title
+                "
+              >
+
+                <a href="#">
+                  New Research Explores
+                  the Limits of AI Reasoning
+                </a>
+
+              </h3>
+
+
+              <p
+                class="
+                  vz-news-excerpt
+                "
+              >
+
+                New research is exploring how
+                reasoning models can solve increasingly
+                difficult problems.
+
+              </p>
+
+
+              <div
+                class="
+                  vz-news-meta
+                "
+              >
+
+                <span>
+                  8 min read
+                </span>
+
+                <span
+                  class="vz-meta-dot"
+                ></span>
+
+                <span>
+                  Research
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         TRENDING
+         =================================================== -->
+
+    <section
+      id="trending"
+      class="
+        vz-section
+      "
+    >
+
+      <div class="vz-container">
+
+
+        <div
+          class="
+            vz-section-header
+            vz-reveal-on-scroll
+          "
+        >
+
+          <div>
+
+            <div
+              class="
+                vz-section-kicker
+              "
+            >
+              What's Hot
+            </div>
+
+            <h2
+              class="
+                vz-section-title
+              "
+            >
+              Trending Now
+            </h2>
+
+          </div>
+
+        </div>
+
+
+
+        <div
+          class="
+            vz-trending
+            vz-reveal-on-scroll
+          "
+        >
+
+
+          <a
+            href="#"
+            class="vz-trending-item"
+          >
+
+            <span
+              class="vz-trending-number"
+            >
+              01
+            </span>
+
+            <span
+              class="vz-trending-title"
+            >
+              The next generation of AI
+              assistants is arriving
+            </span>
+
+            <span
+              class="vz-trending-meta"
+            >
+              12K reads
+            </span>
+
+          </a>
+
+
+          <a
+            href="#"
+            class="vz-trending-item"
+          >
+
+            <span
+              class="vz-trending-number"
+            >
+              02
+            </span>
+
+            <span
+              class="vz-trending-title"
+            >
+              AI agents are becoming
+              more autonomous
+            </span>
+
+            <span
+              class="vz-trending-meta"
+            >
+              9K reads
+            </span>
+
+          </a>
+
+
+          <a
+            href="#"
+            class="vz-trending-item"
+          >
+
+            <span
+              class="vz-trending-number"
+            >
+              03
+            </span>
+
+            <span
+              class="vz-trending-title"
+            >
+              How generative AI is
+              transforming creativity
+            </span>
+
+            <span
+              class="vz-trending-meta"
+            >
+              7K reads
+            </span>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         NEWSLETTER
+         =================================================== -->
+
+    <section
+      class="
+        vz-section
+      "
+    >
+
+      <div class="vz-container">
+
+
+        <div
+          class="
+            vz-newsletter
+            vz-aurora
+            vz-reveal-on-scroll
+          "
+        >
+
+          <div
+            class="
+              vz-section-kicker
+            "
+          >
+            Vanzone Intelligence
+          </div>
+
+
+          <h2
+            class="
+              vz-newsletter-title
+            "
+          >
+            Stay ahead of AI.
+          </h2>
+
+
+          <p
+            class="
+              vz-newsletter-text
+            "
+          >
+
+            Get the most important AI stories,
+            breakthroughs, and trends delivered
+            straight to your inbox.
+
+          </p>
+
+
+          <form
+            class="
+              vz-newsletter-form
+            "
+          >
+
+            <input
+              type="email"
+              placeholder="Your email address"
+              aria-label="Email address"
+              style="
+                flex:1;
+                min-height:48px;
+                padding:0 18px;
+                border-radius:999px;
+                border:1px solid rgba(255,255,255,.1);
+                background:rgba(255,255,255,.06);
+                color:white;
+                outline:none;
+              "
+            >
+
+            <button
+              type="submit"
+              class="
+                vz-btn
+                vz-btn-primary
+              "
+            >
+              Subscribe
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer
+    id="about"
+    class="vz-footer"
+  >
+
+    <div class="vz-container">
+
+
+      <div
+        class="
+          vz-footer-grid
+        "
+      >
+
+
+        <div>
+
+          <a
+            href="#"
+            class="vz-logo"
+          >
+
+            <span
+              class="vz-logo-mark"
+            >
+              V
+            </span>
+
+            Vanzone
+
+          </a>
+
+
+          <p
+            style="
+              max-width:420px;
+              margin-top:18px;
+              color:var(--vz-text-muted);
+              line-height:1.7;
+            "
+          >
+
+            Independent AI news,
+            insights, and technology
+            intelligence for a global audience.
+
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <div
+            class="vz-footer-title"
+          >
+            Explore
+          </div>
+
+          <a
+            href="#latest"
+            class="vz-footer-link"
+          >
+            Latest News
+          </a>
+
+          <a
+            href="#trending"
+            class="vz-footer-link"
+          >
+            Trending
+          </a>
+
+          <a
+            href="#"
+            class="vz-footer-link"
+          >
+            AI Tools
+          </a>
+
+        </div>
+
+
+        <div>
+
+          <div
+            class="vz-footer-title"
+          >
+            Topics
+          </div>
+
+          <a
+            href="#"
+            class="vz-footer-link"
+          >
+            AI Agents
+          </a>
+
+          <a
+            href="#"
+            class="vz-footer-link"
+          >
+            Generative AI
+          </a>
+
+          <a
+            href="#"
+            class="vz-footer-link"
+          >
+            AI Research
+          </a>
+
+        </div>
+
+
+        <div>
+
+          <div
+            class="vz-footer-title"
+          >
+            Company
+          </div>
+
+          <a
+            href="#"
+            class="vz-footer-link"
+          >
+            About
+          </a>
+
+          <a
+            href="#"
+            class="vz-footer-link"
+          >
+            Contact
+          </a>
+
+          <a
+            href="#"
+            class="vz-footer-link"
+          >
+            Privacy
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <div
+        class="
+          vz-footer-bottom
+        "
+      >
+
+        <span>
+          © 2026 Vanzone AI UI
+        </span>
+
+        <span>
+          Built for the future of AI media.
+        </span>
+        
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- VANZONE JS -->
+
+  <script>
+    src="../js/vanzone-ui.js"
+    defer 
+  ></script>
+  
+</body>
+
+</html>
+  
