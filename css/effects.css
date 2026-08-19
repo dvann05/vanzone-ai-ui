@@ -1,0 +1,643 @@
+/* =========================================================
+   VANZONE AI UI
+   VISUAL EFFECTS ENGINE
+   Version: 1.0.0
+   ========================================================= */
+
+
+/* =========================================================
+   AURORA BACKGROUND
+   ========================================================= */
+
+.vz-aurora {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.vz-aurora::before,
+.vz-aurora::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  filter: blur(90px);
+
+  opacity: .22;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+.vz-aurora::before {
+  top: -180px;
+  left: -120px;
+
+  background: var(--vz-primary);
+
+  animation:
+    vzAuroraOne 12s ease-in-out infinite alternate;
+}
+
+.vz-aurora::after {
+  right: -150px;
+  bottom: -180px;
+
+  background: var(--vz-cyan);
+
+  animation:
+    vzAuroraTwo 15s ease-in-out infinite alternate;
+}
+
+@keyframes vzAuroraOne {
+
+  0% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(140px, 80px, 0)
+      scale(1.25);
+  }
+
+  100% {
+    transform:
+      translate3d(-60px, 160px, 0)
+      scale(.9);
+  }
+
+}
+
+@keyframes vzAuroraTwo {
+
+  0% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(-120px, -80px, 0)
+      scale(1.2);
+  }
+
+  100% {
+    transform:
+      translate3d(80px, -140px, 0)
+      scale(.85);
+  }
+
+}
+
+
+/* =========================================================
+   AI GRID
+   ========================================================= */
+
+.vz-ai-grid {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.vz-ai-grid::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.035) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    40px 40px;
+
+  mask-image:
+    radial-gradient(
+      ellipse at center,
+      black 20%,
+      transparent 75%
+    );
+
+  -webkit-mask-image:
+    radial-gradient(
+      ellipse at center,
+      black 20%,
+      transparent 75%
+    );
+
+  opacity: .7;
+}
+
+
+/* =========================================================
+   GRID GLOW
+   ========================================================= */
+
+.vz-grid-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+.vz-grid-glow::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(109,93,252,.18),
+      transparent 55%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   GLOW ORB
+   ========================================================= */
+
+.vz-orb {
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(70px);
+
+  opacity: .35;
+
+  background:
+    var(--vz-gradient-ai);
+}
+
+.vz-orb-primary {
+  background:
+    var(--vz-primary);
+}
+
+.vz-orb-cyan {
+  background:
+    var(--vz-cyan);
+}
+
+.vz-orb-purple {
+  background:
+    var(--vz-purple);
+}
+
+
+/* =========================================================
+   FLOATING ORBS
+   ========================================================= */
+
+.vz-floating-orb {
+  animation:
+    vzOrbFloat 7s ease-in-out infinite;
+}
+
+@keyframes vzOrbFloat {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0,0,0);
+  }
+
+  50% {
+    transform:
+      translate3d(30px,-25px,0);
+  }
+
+}
+
+
+/* =========================================================
+   GLASS CARD
+   ========================================================= */
+
+.vz-glass-card {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.08),
+      rgba(255,255,255,.025)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.11);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 20px 60px rgba(0,0,0,.18);
+
+  backdrop-filter:
+    blur(20px);
+
+  -webkit-backdrop-filter:
+    blur(20px);
+}
+
+
+/* =========================================================
+   HOLOGRAPHIC
+   ========================================================= */
+
+.vz-holographic {
+  position: relative;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+.vz-holographic::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -100%;
+
+  background:
+    conic-gradient(
+      from 0deg,
+      transparent,
+      rgba(109,93,252,.18),
+      transparent,
+      rgba(0,212,255,.16),
+      transparent
+    );
+
+  animation:
+    vzHolographic 10s linear infinite;
+
+  z-index: -1;
+}
+
+@keyframes vzHolographic {
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   MOVING LIGHT
+   ========================================================= */
+
+.vz-light-sweep {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.vz-light-sweep::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 60%;
+  height: 100%;
+
+  transform:
+    skewX(-20deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.12),
+      transparent
+    );
+
+  animation:
+    vzLightSweep 5s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+@keyframes vzLightSweep {
+
+  0% {
+    left: -120%;
+  }
+
+  45%,
+  100% {
+    left: 140%;
+  }
+
+}
+
+
+/* =========================================================
+   SPOTLIGHT
+   ========================================================= */
+
+.vz-spotlight {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.vz-spotlight::before {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  left: var(--vz-mouse-x, 50%);
+  top: var(--vz-mouse-y, 50%);
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(109,93,252,.20),
+      transparent 65%
+    );
+
+  pointer-events: none;
+
+  transition:
+    left .25s ease,
+    top .25s ease;
+}
+
+
+/* =========================================================
+   NOISE TEXTURE
+   ========================================================= */
+
+.vz-noise {
+  position: relative;
+
+  isolation: isolate;
+}
+
+.vz-noise::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 10;
+
+  pointer-events: none;
+
+  opacity: .035;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+
+
+/* =========================================================
+   NEON LINE
+   ========================================================= */
+
+.vz-neon-line {
+  position: relative;
+
+  height: 1px;
+
+  overflow: hidden;
+
+  background:
+    rgba(255,255,255,.08);
+}
+
+.vz-neon-line::after {
+  content: "";
+
+  position: absolute;
+
+  left: -30%;
+
+  top: 0;
+
+  width: 30%;
+  height: 100%;
+
+  background:
+    var(--vz-gradient-ai);
+
+  box-shadow:
+    0 0 15px rgba(109,93,252,.7);
+
+  animation:
+    vzNeonLine 4s linear infinite;
+}
+
+@keyframes vzNeonLine {
+
+  from {
+    left: -30%;
+  }
+
+  to {
+    left: 110%;
+  }
+
+}
+
+
+/* =========================================================
+   PARTICLE DOT
+   ========================================================= */
+
+.vz-particle {
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background:
+    var(--vz-primary);
+
+  box-shadow:
+    0 0 14px rgba(109,93,252,.8);
+
+  pointer-events: none;
+
+  animation:
+    vzParticleFloat 6s ease-in-out infinite;
+}
+
+@keyframes vzParticleFloat {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0,0,0);
+
+    opacity: .25;
+  }
+
+  50% {
+    transform:
+      translate3d(20px,-40px,0);
+
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   GRADIENT BORDER
+   ========================================================= */
+
+.vz-gradient-border {
+  position: relative;
+
+  isolation: isolate;
+
+  border:
+    1px solid transparent;
+}
+
+.vz-gradient-border::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -1px;
+
+  border-radius: inherit;
+
+  background:
+    var(--vz-gradient-ai);
+
+  z-index: -2;
+}
+
+.vz-gradient-border::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    var(--vz-bg);
+
+  z-index: -1;
+}
+
+
+/* =========================================================
+   FADE EDGE
+   ========================================================= */
+
+.vz-fade-edge {
+  mask-image:
+    linear-gradient(
+      90deg,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+
+  -webkit-mask-image:
+    linear-gradient(
+      90deg,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   HOVER GLOW BORDER
+   ========================================================= */
+
+.vz-glow-border {
+  position: relative;
+
+  border:
+    1px solid var(--vz-border);
+
+  transition:
+    border-color .4s ease,
+    box-shadow .4s ease;
+}
+
+.vz-glow-border:hover {
+  border-color:
+    rgba(109,93,252,.55);
+
+  box-shadow:
+    0 0 0 1px rgba(109,93,252,.08),
+    0 20px 60px rgba(109,93,252,.14);
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .vz-aurora::before,
+  .vz-aurora::after,
+  .vz-floating-orb,
+  .vz-holographic::before,
+  .vz-light-sweep::after,
+  .vz-neon-line::after,
+  .vz-particle {
+    animation: none;
+  }
+
+}
