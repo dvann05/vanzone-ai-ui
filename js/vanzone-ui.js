@@ -1169,27 +1169,37 @@ const initEscapeKey = () => {
 
   ready(() => {
 
-    initReveal();
+  initReveal();
 
-    initNavbar();
+  initNavbar();
 
-    initSpotlight();
+  initSpotlight();
 
-    initMagneticButtons();
+  initMagneticButtons();
 
-    initTilt();
+  initTilt();
 
-    initSmoothAnchors();
+  initSmoothAnchors();
 
-    initMobileMenu();
+  initMobileMenu();
 
-    initTheme();
+  initTheme();
 
-    initCopyCode();
+  initCopyCode();
 
-    initReadingProgress();
+  initReadingProgress();
 
-  });
+  initTabs();
+
+  initAccordion();
+
+  initModals();
+
+  initSearchOverlay();
+
+  initEscapeKey();
+
+});
 
 
   /* =======================================================
@@ -1210,7 +1220,17 @@ const initEscapeKey = () => {
 
     tilt: initTilt,
 
-    theme: initTheme
+    theme: initTheme,
+
+    tabs: initTabs,
+
+    accordion: initAccordion,
+
+    modal: initModals,
+
+    search: initSearchOverlay,
+
+    toast: showToast
 
   };
 
