@@ -1,0 +1,28 @@
+/*!
+ * Vanzone AI UI
+ * Production CSS Entry
+ * Version 1.0.0
+ * MIT License
+ */
+
+/* Core system */
+@import url("https://cdn.jsdelivr.net/gh/dvann05/vanzone-ai-ui@main/css/variables.css");
+@import url("https://cdn.jsdelivr.net/gh/dvann05/vanzone-ai-ui@main/css/reset.css");
+@import url("https://cdn.jsdelivr.net/gh/dvann05/vanzone-ai-ui@main/css/core.css");
+
+/* Visual system */
+@import url("https://cdn.jsdelivr.net/gh/dvann05/vanzone-ai-ui@main/css/animations.css");
+@import url("https://cdn.jsdelivr.net/gh/dvann05/vanzone-ai-ui@main/css/effects.css");
+
+/* Components */
+@import url("https://cdn.jsdelivr.net/gh/dvann05/vanzone-ai-ui@main/css/components.css");
+@import url("https://cdn.jsdelivr.net/gh/dvann05/vanzone-ai-ui@main/css/interactive.css");
+
+/* AI visual */
+@import url("https://cdn.jsdelivr.net/gh/dvann05/vanzone-ai-ui@main/css/ai-background.css");
+
+/* Utilities */
+@import url("https://cdn.jsdelivr.net/gh/dvann05/vanzone-ai-ui@main/css/utilities.css");
+
+/* Responsive */
+@import url("https://cdn.jsdelivr.net/gh/dvann05/vanzone-ai-ui@main/css/responsive.css");
