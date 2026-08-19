@@ -1,0 +1,387 @@
+/* =========================================================
+   VANZONE AI UI
+   UTILITY SYSTEM
+   Version: 1.0.0
+   ========================================================= */
+
+
+/* =========================================================
+   MARGIN
+   ========================================================= */
+
+.vz-m-0 {
+  margin: 0 !important;
+}
+
+.vz-m-auto {
+  margin: auto !important;
+}
+
+.vz-mt-1 {
+  margin-top: 4px !important;
+}
+
+.vz-mt-2 {
+  margin-top: 8px !important;
+}
+
+.vz-mt-3 {
+  margin-top: 12px !important;
+}
+
+.vz-mt-4 {
+  margin-top: 16px !important;
+}
+
+.vz-mt-6 {
+  margin-top: 24px !important;
+}
+
+.vz-mt-8 {
+  margin-top: 32px !important;
+}
+
+.vz-mt-12 {
+  margin-top: 48px !important;
+}
+
+.vz-mb-2 {
+  margin-bottom: 8px !important;
+}
+
+.vz-mb-4 {
+  margin-bottom: 16px !important;
+}
+
+.vz-mb-6 {
+  margin-bottom: 24px !important;
+}
+
+.vz-mb-8 {
+  margin-bottom: 32px !important;
+}
+
+
+/* =========================================================
+   PADDING
+   ========================================================= */
+
+.vz-p-0 {
+  padding: 0 !important;
+}
+
+.vz-p-2 {
+  padding: 8px !important;
+}
+
+.vz-p-3 {
+  padding: 12px !important;
+}
+
+.vz-p-4 {
+  padding: 16px !important;
+}
+
+.vz-p-6 {
+  padding: 24px !important;
+}
+
+.vz-p-8 {
+  padding: 32px !important;
+}
+
+
+/* =========================================================
+   GAP
+   ========================================================= */
+
+.vz-gap-1 {
+  gap: 4px !important;
+}
+
+.vz-gap-2 {
+  gap: 8px !important;
+}
+
+.vz-gap-3 {
+  gap: 12px !important;
+}
+
+.vz-gap-4 {
+  gap: 16px !important;
+}
+
+.vz-gap-6 {
+  gap: 24px !important;
+}
+
+.vz-gap-8 {
+  gap: 32px !important;
+}
+
+
+/* =========================================================
+   FLEX
+   ========================================================= */
+
+.vz-items-start {
+  align-items: flex-start !important;
+}
+
+.vz-items-center {
+  align-items: center !important;
+}
+
+.vz-items-end {
+  align-items: flex-end !important;
+}
+
+.vz-justify-start {
+  justify-content: flex-start !important;
+}
+
+.vz-justify-center {
+  justify-content: center !important;
+}
+
+.vz-justify-between {
+  justify-content: space-between !important;
+}
+
+.vz-justify-end {
+  justify-content: flex-end !important;
+}
+
+.vz-wrap {
+  flex-wrap: wrap !important;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+.vz-font-normal {
+  font-weight: 400 !important;
+}
+
+.vz-font-medium {
+  font-weight: 500 !important;
+}
+
+.vz-font-semibold {
+  font-weight: 600 !important;
+}
+
+.vz-font-bold {
+  font-weight: 700 !important;
+}
+
+.vz-font-black {
+  font-weight: 900 !important;
+}
+
+.vz-leading-tight {
+  line-height: 1.15 !important;
+}
+
+.vz-leading-normal {
+  line-height: 1.5 !important;
+}
+
+.vz-leading-relaxed {
+  line-height: 1.75 !important;
+}
+
+
+/* =========================================================
+   TEXT SIZE
+   ========================================================= */
+
+.vz-text-xs {
+  font-size: 12px !important;
+}
+
+.vz-text-sm {
+  font-size: 14px !important;
+}
+
+.vz-text-base {
+  font-size: 16px !important;
+}
+
+.vz-text-lg {
+  font-size: 18px !important;
+}
+
+.vz-text-xl {
+  font-size: 22px !important;
+}
+
+.vz-text-2xl {
+  font-size: 30px !important;
+}
+
+.vz-text-3xl {
+  font-size: 40px !important;
+}
+
+
+/* =========================================================
+   WIDTH
+   ========================================================= */
+
+.vz-w-auto {
+  width: auto !important;
+}
+
+.vz-w-full {
+  width: 100% !important;
+}
+
+.vz-max-w-sm {
+  max-width: 480px !important;
+}
+
+.vz-max-w-md {
+  max-width: 640px !important;
+}
+
+.vz-max-w-lg {
+  max-width: 900px !important;
+}
+
+.vz-max-w-xl {
+  max-width: 1200px !important;
+}
+
+
+/* =========================================================
+   OPACITY
+   ========================================================= */
+
+.vz-opacity-0 {
+  opacity: 0 !important;
+}
+
+.vz-opacity-50 {
+  opacity: .5 !important;
+}
+
+.vz-opacity-75 {
+  opacity: .75 !important;
+}
+
+.vz-opacity-100 {
+  opacity: 1 !important;
+}
+
+
+/* =========================================================
+   POINTER
+   ========================================================= */
+
+.vz-pointer {
+  cursor: pointer !important;
+}
+
+.vz-not-allowed {
+  cursor: not-allowed !important;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.vz-select-none {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+
+/* =========================================================
+   ASPECT RATIO
+   ========================================================= */
+
+.vz-ratio-16-9 {
+  aspect-ratio: 16 / 9 !important;
+}
+
+.vz-ratio-4-3 {
+  aspect-ratio: 4 / 3 !important;
+}
+
+.vz-ratio-1-1 {
+  aspect-ratio: 1 / 1 !important;
+}
+
+.vz-ratio-3-4 {
+  aspect-ratio: 3 / 4 !important;
+}
+
+
+/* =========================================================
+   OBJECT FIT
+   ========================================================= */
+
+.vz-object-cover {
+  object-fit: cover !important;
+}
+
+.vz-object-contain {
+  object-fit: contain !important;
+}
+
+
+/* =========================================================
+   TRANSITIONS
+   ========================================================= */
+
+.vz-transition {
+  transition:
+    all var(--vz-duration) var(--vz-ease) !important;
+}
+
+.vz-transition-fast {
+  transition:
+    all var(--vz-duration-fast) var(--vz-ease) !important;
+}
+
+
+/* =========================================================
+   SAFE GPU ACCELERATION
+   ========================================================= */
+
+.vz-gpu {
+  transform: translateZ(0);
+
+  backface-visibility: hidden;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   MOBILE UTILITIES
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .vz-mobile-hidden {
+    display: none !important;
+  }
+
+  .vz-mobile-full {
+    width: 100% !important;
+  }
+
+  .vz-mobile-center {
+    text-align: center !important;
+  }
+
+  .vz-mobile-column {
+    flex-direction: column !important;
+  }
+
+  }
