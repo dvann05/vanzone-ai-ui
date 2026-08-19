@@ -1,0 +1,21 @@
+{
+  "name": "vanzone-ai-ui",
+  "version": "1.0.0",
+  "description": "A futuristic AI news UI design system built with vanilla CSS and JavaScript.",
+  "main": "dist/vanzone-ai-ui.js",
+  "scripts": {
+    "build:css": "node build/build-css.js",
+    "build:js": "node build/build-js.js",
+    "build": "npm run build:css && npm run build:js"
+  },
+  "keywords": [
+    "ai",
+    "news",
+    "ui",
+    "css",
+    "design-system",
+    "vanilla-css",
+    "javascript"
+  ],
+  "license": "MIT"
+}
