@@ -1,0 +1,523 @@
+/* =========================================================
+   VANZONE AI UI
+   RESPONSIVE SYSTEM
+   Version: 1.0.0
+   ========================================================= */
+
+
+/* =========================================================
+   BASE FLUID RULES
+   ========================================================= */
+
+.vz-fluid-title {
+  font-size: clamp(2rem, 5vw, 5rem);
+}
+
+.vz-fluid-text {
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+}
+
+.vz-fluid-space {
+  padding-block: clamp(3rem, 8vw, 8rem);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+   ========================================================= */
+
+@media (min-width: 1440px) {
+
+  .vz-container {
+    width: min(
+      calc(100% - 80px),
+      var(--vz-container-2xl)
+    );
+  }
+
+  .vz-hero-title {
+    font-size: clamp(72px, 6vw, 104px);
+  }
+
+  .vz-news-grid-wide {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+   1200px - 1439px
+   ========================================================= */
+
+@media (max-width: 1439px) {
+
+  .vz-container {
+    width: min(
+      calc(100% - 48px),
+      var(--vz-container-xl)
+    );
+  }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+   1024px - 1199px
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+  .vz-container {
+    width:
+      min(
+        calc(100% - 40px),
+        var(--vz-container-xl)
+      );
+  }
+
+  .vz-hero {
+    min-height: 680px;
+  }
+
+  .vz-featured {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .vz-featured-content {
+    padding: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+   901px - 1023px
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .vz-container {
+    width:
+      min(
+        calc(100% - 36px),
+        var(--vz-container-lg)
+      );
+  }
+
+  .vz-grid-4 {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .vz-grid-3 {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .vz-hero {
+    padding:
+      90px 0 80px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .vz-container {
+    width:
+      min(
+        calc(100% - 32px),
+        var(--vz-container-md)
+      );
+  }
+
+  .vz-navbar-inner {
+    min-height: 68px;
+  }
+
+  .vz-navbar-actions {
+    gap: 6px;
+  }
+
+  .vz-hero {
+    min-height: auto;
+
+    padding:
+      100px 0 80px;
+  }
+
+  .vz-hero-content {
+    max-width: 760px;
+  }
+
+  .vz-featured {
+    grid-template-columns: 1fr;
+  }
+
+  .vz-featured-image {
+    aspect-ratio: 16 / 9;
+    min-height: auto;
+  }
+
+  .vz-featured-content {
+    padding: 36px;
+  }
+
+  .vz-footer-grid {
+    gap: 32px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE LANDSCAPE / LARGE PHONE
+   641px - 767px
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  .vz-container {
+    width:
+      calc(100% - 28px);
+  }
+
+  .vz-section {
+    padding-block:
+      64px;
+  }
+
+  .vz-grid-2,
+  .vz-grid-3,
+  .vz-grid-4 {
+    grid-template-columns:
+      1fr;
+  }
+
+  .vz-auto-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .vz-hero-title {
+    font-size:
+      clamp(42px, 12vw, 64px);
+  }
+
+  .vz-featured-title {
+    font-size:
+      clamp(30px, 8vw, 42px);
+  }
+
+  .vz-trending-item {
+    grid-template-columns:
+      42px 1fr;
+
+    gap: 14px;
+  }
+
+  .vz-trending-meta {
+    grid-column: 2;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   481px - 640px
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .vz-container {
+    width:
+      calc(100% - 24px);
+  }
+
+  .vz-section {
+    padding-block:
+      56px;
+  }
+
+  .vz-section-lg {
+    padding-block:
+      72px;
+  }
+
+  .vz-navbar-inner {
+    min-height: 62px;
+  }
+
+  .vz-logo {
+    font-size: 18px;
+  }
+
+  .vz-logo-mark {
+    width: 31px;
+    height: 31px;
+  }
+
+  .vz-hero {
+    padding:
+      72px 0 64px;
+  }
+
+  .vz-hero-eyebrow {
+    font-size: 10px;
+  }
+
+  .vz-hero-description {
+    font-size: 16px;
+  }
+
+  .vz-news-body {
+    padding:
+      18px;
+  }
+
+  .vz-news-title {
+    font-size:
+      19px;
+  }
+
+  .vz-news-excerpt {
+    font-size:
+      13px;
+  }
+
+  .vz-featured-content {
+    padding:
+      24px;
+  }
+
+  .vz-featured-excerpt {
+    font-size:
+      14px;
+  }
+
+  .vz-article-header {
+    text-align:
+      left;
+  }
+
+  .vz-article-meta {
+    justify-content:
+      flex-start;
+  }
+
+  .vz-article-title {
+    font-size:
+      clamp(36px, 11vw, 54px);
+  }
+
+  .vz-article-body {
+    margin-top:
+      48px;
+
+    font-size:
+      17px;
+  }
+
+  .vz-article-body h2 {
+    font-size:
+      27px;
+  }
+
+  .vz-article-body h3 {
+    font-size:
+      22px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   360px - 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .vz-container {
+    width:
+      calc(100% - 20px);
+  }
+
+  .vz-hero-title {
+    font-size:
+      clamp(38px, 13vw, 52px);
+  }
+
+  .vz-hero-actions {
+    width: 100%;
+  }
+
+  .vz-btn {
+    min-height:
+      44px;
+
+    padding:
+      0 16px;
+  }
+
+  .vz-news-card {
+    border-radius:
+      var(--vz-radius-md);
+  }
+
+  .vz-news-image {
+    aspect-ratio:
+      16 / 10;
+  }
+
+  .vz-section-title {
+    font-size:
+      28px;
+  }
+
+  .vz-trending-number {
+    font-size:
+      26px;
+  }
+
+  .vz-share {
+    flex-wrap:
+      wrap;
+  }
+
+  .vz-newsletter {
+    padding:
+      26px 20px;
+  }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+   UNDER 360px
+   ========================================================= */
+
+@media (max-width: 359px) {
+
+  html {
+    font-size:
+      15px;
+  }
+
+  .vz-container {
+    width:
+      calc(100% - 16px);
+  }
+
+  .vz-hero-title {
+    font-size:
+      36px;
+  }
+
+  .vz-news-body {
+    padding:
+      16px;
+  }
+
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .vz-news-card:hover {
+    transform:
+      none;
+
+    box-shadow:
+      var(--vz-shadow-sm);
+  }
+
+  .vz-news-card:hover
+  .vz-news-image img {
+    transform:
+      none;
+  }
+
+  .vz-hover-lift:hover,
+  .vz-hover-scale:hover {
+    transform:
+      none;
+  }
+
+}
+
+
+/* =========================================================
+   HIGH DPI / RETINA
+   ========================================================= */
+
+@media (min-resolution: 2dppx) {
+
+  .vz-neon-line,
+  .vz-divider,
+  .vz-gradient-border {
+    transform:
+      translateZ(0);
+  }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE PHONE
+   ========================================================= */
+
+@media (max-height: 500px)
+       and (orientation: landscape) {
+
+  .vz-hero {
+    min-height:
+      auto;
+
+    padding:
+      70px 0;
+  }
+
+  .vz-navbar-inner {
+    min-height:
+      58px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .vz-news-card,
+  .vz-btn,
+  .vz-nav-link,
+  .vz-page,
+  .vz-share-button {
+    transition:
+      none;
+  }
+
+  }
