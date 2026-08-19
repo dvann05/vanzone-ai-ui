@@ -187,13 +187,30 @@
 
         <div class="vz-navbar-actions">
 
-          <button
-            class="vz-btn vz-btn-secondary"
-            data-vz-theme-toggle
-            aria-label="Switch theme"
-          >
-            ◐
-          </button>
+  <!-- Search -->
+  <button
+    class="
+      vz-btn
+      vz-btn-secondary
+    "
+    data-vz-command-open
+    aria-label="Search"
+  >
+    ⌕
+  </button>
+
+
+  <!-- Theme -->
+  <button
+    class="
+      vz-btn
+      vz-btn-secondary
+    "
+    data-vz-theme-toggle
+    aria-label="Switch theme"
+  >
+    ◐
+  </button>
 
         </div>
 
@@ -1244,6 +1261,209 @@
     </div>
 
   </footer>
+
+    <div
+  class="vz-command"
+  data-vz-command
+  role="dialog"
+  aria-modal="true"
+  aria-label="Vanzone search"
+>
+
+  <div class="vz-command-panel">
+
+
+    <div class="vz-command-search">
+
+      <span
+        class="vz-command-search-icon"
+      >
+        ⌕
+      </span>
+
+
+      <input
+        type="search"
+        class="vz-command-input"
+        data-vz-command-input
+        placeholder="Search AI news, topics, tools..."
+        autocomplete="off"
+      >
+
+
+      <span
+        class="vz-command-shortcut"
+      >
+        ESC
+      </span>
+
+    </div>
+
+
+    <div class="vz-command-results">
+
+
+      <div class="vz-command-group">
+        Explore
+      </div>
+
+
+      <button
+        class="vz-command-item is-selected"
+        data-vz-command-item
+        data-vz-command-href="#latest"
+      >
+
+        <span
+          class="vz-command-icon"
+        >
+          ✦
+        </span>
+
+        <span
+          class="vz-command-label"
+        >
+          Latest AI News
+        </span>
+
+        <span
+          class="vz-command-description"
+        >
+          New stories
+        </span>
+
+      </button>
+
+
+      <button
+        class="vz-command-item"
+        data-vz-command-item
+        data-vz-command-href="#trending"
+      >
+
+        <span
+          class="vz-command-icon"
+        >
+          ↗
+        </span>
+
+        <span
+          class="vz-command-label"
+        >
+          Trending
+        </span>
+
+        <span
+          class="vz-command-description"
+        >
+          What's hot
+        </span>
+
+      </button>
+
+
+      <button
+        class="vz-command-item"
+        data-vz-command-item
+        data-vz-command-href="#"
+      >
+
+        <span
+          class="vz-command-icon"
+        >
+          ◈
+        </span>
+
+        <span
+          class="vz-command-label"
+        >
+          AI Tools
+        </span>
+
+        <span
+          class="vz-command-description"
+        >
+          Discover tools
+        </span>
+
+      </button>
+
+
+      <button
+        class="vz-command-item"
+        data-vz-command-item
+        data-vz-command-href="#"
+      >
+
+        <span
+          class="vz-command-icon"
+        >
+          ◎
+        </span>
+
+        <span
+          class="vz-command-label"
+        >
+          AI Research
+        </span>
+
+        <span
+          class="vz-command-description"
+        >
+          Research & science
+        </span>
+
+      </button>
+
+
+      <div
+        class="vz-command-empty"
+        data-vz-command-empty
+        hidden
+      >
+        No results found.
+      </div>
+
+
+    </div>
+
+
+    <div class="vz-command-footer">
+
+      <span>
+        Navigate
+      </span>
+
+      <div
+        class="vz-command-keys"
+      >
+
+        <span
+          class="vz-command-key"
+        >
+          ↑
+        </span>
+
+        <span
+          class="vz-command-key"
+        >
+          ↓
+        </span>
+
+        <span
+          class="vz-command-key"
+        >
+          Enter
+        </span>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+    </div>
 
   <!-- VANZONE JS -->
 
